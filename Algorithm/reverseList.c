@@ -1,6 +1,6 @@
-#ifndef _REVERSELIST_H_
+#include<stdio.h>
+#include<stdlib.h>
 #include"reverselist.h"
-#endif // !_REVERSELIST_H_
 
 plist reverseList(plist head) {
 	if (head == NULL || head->next == NULL) {
