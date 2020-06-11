@@ -1,15 +1,15 @@
 /*
-	+---------------------------------------+
-	|	Array.h 							|
-	|										|
-	|	Author:Elio Yang					|
-	|	Created on 10/06/2020				|
-	|										|
-	|	Header      						|
-	|										|
-	|	Compiled in Visual Studio 2017		|
-	|										|
-	+---------------------------------------+
+    +---------------------------------------+
+    |	Array.h                             |
+    |                                       |
+    |	Author:Elio Yang                    |
+    |	Created on 10/06/2020               |
+    |                                       |
+    |	Header                              |
+    |                                       |
+    |	Compiled in Visual Studio 2017      |
+    |                                       |
+    +---------------------------------------+
 
 */
 #pragma once

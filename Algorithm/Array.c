@@ -1,15 +1,15 @@
 /*
-	+---------------------------------------+
-	|	Array.c								|
-	|										|
-	|	Author:Elio Yang					|
-	|	Created on 10/06/2020				|
-	|										|
-	|	Implementation						|
-	|										|
-	|	Compiled in Visual Studio 2017		|
-	|										|
-	+---------------------------------------+
+    +---------------------------------------+
+	|	Array.c                             |
+    |                                       |
+    |   Author:Elio Yang                    |
+    |   Created on 10/06/2020               |
+    |                                       |
+    |   Implementation                      |
+    |                                       |
+    |	Compiled in Visual Studio 2017      |
+    |                                       |
+    +---------------------------------------+
 */
 
 /*
