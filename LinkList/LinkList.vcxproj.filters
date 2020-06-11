@@ -13,30 +13,5 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\Array">
-      <UniqueIdentifier>{881474c1-3e57-46f1-a332-60c82118ac40}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="MainTestPlugin.c">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="reverseList.c">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Array.c">
-      <Filter>源文件\Array</Filter>
-    </ClCompile>
-    <ClCompile Include="ArrayTests.c">
-      <Filter>源文件\Array</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="reverselist.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Array.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
