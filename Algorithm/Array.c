@@ -1,6 +1,6 @@
 /*
     +---------------------------------------+
-	|	Array.c                             |
+    |   Array.c                             |
     |                                       |
     |   Author:Elio Yang                    |
     |   Created on 10/06/2020               |
