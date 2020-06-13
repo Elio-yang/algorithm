@@ -35,10 +35,9 @@ Array* creatArray(int size) {
 	Array* array = (Array*)malloc(sizeof(Array));
 	array->arr = (int*)malloc(size * sizeof(int));
 	array->size = size;
-	int i = 0;
-	while (i<size) {
-		array->arr [i] = 0;
-		i++;
+	int i ;
+	for (i = 0; i < array->size; i++) {
+		array->arr[i] = 0;
 	}
 	return array;
 }
@@ -47,17 +46,15 @@ Array* getCopyArray(Array*arr_sample) {
 	Array* array_copy = (Array*)malloc(sizeof(Array));
 	array_copy->arr = (int*)malloc(arr_sample->size * sizeof(int));
 	array_copy->size = arr_sample->size;
-	int i = 0;
-	while (i<arr_sample->size) {
-		array_copy [i] = arr_sample [i];
-		i++;
+	for (int i = 0; i < arr_sample->size; i++) {
+		array_copy->arr[i]=arr_sample->arr[i];
 	}
 	return array_copy;
 }
 
 int insertValueArray(Array*array, int position, int value) {
 	if ((unsigned)position < (unsigned)array->size) {
-		if (array->arr [position] != 0) {
+		if (array->arr [position] == 0) {
 			array->arr [position] = value;
 			return SUCCESS;
 		}
@@ -101,7 +98,7 @@ int eraseArray(Array*array) {
 	return SUCCESS;
 }
 
-int swichValuesArray(Array*array, int position1, int position2) {
+int switchValuesArray(Array*array, int position1, int position2) {
 	if ((((unsigned)array->size - (unsigned)position1) | ((unsigned)array->size - (unsigned)position2) )> 0) {
 		array->arr [position1] ^= array->arr [position2];
 		array->arr [position2] ^= array->arr [position1];
@@ -111,9 +108,9 @@ int swichValuesArray(Array*array, int position1, int position2) {
 	return INVALID_POSITION;
 }
 void swap(Array*array, int position1, int position2) {
-	array->arr [position1] ^= array->arr [position2];
-	array->arr [position2] ^= array->arr [position1];
-	array->arr [position1] ^= array->arr [position2];
+	int tmp = array->arr [position1];
+	array->arr [position1] = array->arr [position2];
+	array->arr [position2] = tmp;
 }
 int reverseArray(Array*array) {
 	for (int i = 0; i < (array->size >>1); i++) {
@@ -150,8 +147,8 @@ int selectionSortArray(Array*array) {
 }
 int valueOccurrenceArray(Array*array, int value) {
 	int cnt = 0;
-	int i=0;
-	while (++i<array->size) {
+	int i;
+	for(i=0;i<array->size;i++){
 		if (array->arr [i] == value) {
 			cnt++;
 		}
@@ -159,9 +156,20 @@ int valueOccurrenceArray(Array*array, int value) {
 	return cnt;
 }
 int findMaxArray(Array*array) {
+	int max = array->arr [0];
+	int i;
+	for(i=0;i<array->size;i++){
+		if (array->arr [i] > max) {
+			max = array->arr [i];
+		}
+	}
+	return max;
+}
+
+int findMinArray(Array*array) {
 	int min = array->arr [0];
-	int i=0;
-	while (++i<array->size) {
+	int i ;
+	for(i=0;i<array->size;i++) {
 		if (array->arr [i] < min) {
 			min = array->arr [i];
 		}
@@ -169,21 +177,10 @@ int findMaxArray(Array*array) {
 	return min;
 }
 
-int findMinArray(Array*array) {
-	int max = array->arr [0];
-	int i = 0;
-	while (++i < array->size) {
-		if (array->arr [i] < max) {
-			max = array->arr [i];
-		}
-	}
-	return max;
-}
-
 int printArray(Array*array) {
 	printf("\t Array\n");
-	int i=0;
-	while (++i<array->size) {
+	int i;
+	for (i = 0; i < array->size; i++) {
 		printf("%d ", array->arr [i]);
 	}
 	printf("\n");

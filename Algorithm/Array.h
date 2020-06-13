@@ -52,7 +52,7 @@ int eraseArray(Array*array);
 // +-------------------------------------+
 // |               Switching             |
 // +-------------------------------------+
-int swichValuesArray(Array*array, int position1, int position2);
+int switchValuesArray(Array*array, int position1, int position2);
 int reverseArray(Array*array);
 
 // +-------------------------------------+
